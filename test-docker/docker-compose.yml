@@ -1,0 +1,17 @@
+services:
+  caddy:
+    build:
+      context: ./build
+      dockerfile: Dockerfile
+    container_name: caddy-allinkl
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./caddy/data:/data
+    env_file:
+      - .env
+    environment:
+      LOG_FILE: "/data/access.log"

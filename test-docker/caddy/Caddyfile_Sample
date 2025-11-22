@@ -1,0 +1,21 @@
+{
+  #change the email
+  email mail@example.com
+  acme_dns allinkl {
+    kas_username {env.KAS_USERNAME}
+    kas_password {env.KAS_PASSWORD}
+  }
+}
+
+#cahnge the wildcard domain name
+*.example.com {
+    #change the test subdomain
+    @test host test.example.com
+    handle @test {
+        reverse_proxy 192.168.2.1
+    }
+
+    handle {
+        respond "unexpected"
+    }
+}
