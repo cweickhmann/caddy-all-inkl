@@ -1,4 +1,4 @@
-module github.com/caddy-dns/all-inkl
+module github.com/cweickhmann/caddy-all-inkl
 
 go 1.25
 
