@@ -4,7 +4,7 @@ go 1.25
 
 require (
 	github.com/caddyserver/caddy/v2 v2.10.2
-	github.com/cweickhmann/all-inkl v0.2.99
+	github.com/cweickhmann/all-inkl v0.2.100
 )
 
 require (
